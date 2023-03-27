@@ -15,8 +15,10 @@ import { Todo, Meta } from 'components/models';
 import ExampleComponent from 'components/ExampleComponent.vue';
 import { ref, inject } from 'vue';
 
+import toml from '../../app-config.toml';
+
 const log: any = inject('vuejs3-logger');
-log.debug('test', 42);
+log.debug(toml);
 
 const todos = ref<Todo[]>([
   {

@@ -12,5 +12,6 @@ export default ({ app }) => {
     separator: '|',
     showConsoleColors: true,
   };
+
   app.use(VueLogger, options);
 };

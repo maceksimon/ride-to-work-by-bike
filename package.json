@@ -21,6 +21,7 @@
     "vuejs3-logger": "^1.0.0"
   },
   "devDependencies": {
+    "@originjs/vite-plugin-content": "^1.0.3",
     "@quasar/app-vite": "^1.0.0",
     "@types/node": "^12.20.21",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
