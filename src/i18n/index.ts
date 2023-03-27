@@ -1,7 +1,7 @@
-import enUS from './en-US';
-import csCZ from './cs-CZ';
+import enUS from '../../locales/en-US.toml';
+import cs from '../../locales/cs.toml';
 
 export default {
   'en-US': enUS,
-  'cs-CZ': csCZ,
+  cs: cs,
 };
