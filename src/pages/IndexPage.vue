@@ -1,6 +1,7 @@
 <template>
   <q-page class="row items-center justify-evenly">
     {{ $t('hello') }}
+    <vue-logo></vue-logo>
     <example-component
       title="Example component"
       active
@@ -13,12 +14,9 @@
 <script lang="ts" setup>
 import { Todo, Meta } from 'components/models';
 import ExampleComponent from 'components/ExampleComponent.vue';
-import { ref, inject } from 'vue';
+import VueLogo from 'components/VueLogo.vue';
 
-import toml from '../../app-config.toml';
-
-const log: any = inject('vuejs3-logger');
-log.debug(toml);
+import { ref } from 'vue';
 
 const todos = ref<Todo[]>([
   {
