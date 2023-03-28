@@ -22,6 +22,6 @@ export default defineComponent({
     :stretch="false"
     :style="{ backgroundColor: lightGrayColor }"
   >
-    <q-tooltip> Some text as content of Tooltip </q-tooltip>
+    <q-tooltip>{{ $t('tooltip') }}</q-tooltip>
   </q-btn>
 </template>
