@@ -1,13 +1,15 @@
 <script lang="ts">
+import config from '../../app.config.toml';
 import { defineComponent } from 'vue';
 import LanguageSwitcher from 'components/LanguageSwitcher.vue';
-import config from '../../app.config.toml';
+import TooltipButton from 'src/components/TooltipButton.vue';
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
     LanguageSwitcher,
+    TooltipButton,
   },
 
   setup() {
@@ -30,7 +32,10 @@ export default defineComponent({
               :rounded="false"
             ></q-avatar>
           </q-toolbar-title>
-          <language-switcher></language-switcher>
+
+          <tooltip-button></tooltip-button>
+
+          <language-switcher class="q-ml-lg"></language-switcher>
         </q-toolbar>
       </div>
     </q-header>
@@ -46,8 +51,7 @@ export default defineComponent({
   background-color: transparent;
 }
 .q-avatar,
-.q-avatar,
-.q-icon {
+.q-avatar .q-icon {
   height: 75px;
   width: auto;
 }
