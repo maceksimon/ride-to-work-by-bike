@@ -1,5 +1,12 @@
+# colors
+
 primaryColor = "#212121"
 secondaryColor = "#5b6470"
+lightGrayColor = "#717f8e"
+blackColor = "#000000"
+
+# images
+
 titleImage = "title.png"
 backgroundImage = "background.png"
 messageImage = "message.png"
