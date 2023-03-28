@@ -21,16 +21,18 @@ export default defineComponent({
 <template>
   <q-layout view="hHh lpR fFf">
     <q-header>
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar
-            :icon="'img:/src/assets/' + titleImage"
-            :square="true"
-            :rounded="false"
-          ></q-avatar>
-        </q-toolbar-title>
-        <language-switcher></language-switcher>
-      </q-toolbar>
+      <div class="container q-py-xl">
+        <q-toolbar>
+          <q-toolbar-title>
+            <q-avatar
+              :icon="'img:/src/assets/' + titleImage"
+              :square="true"
+              :rounded="false"
+            ></q-avatar>
+          </q-toolbar-title>
+          <language-switcher></language-switcher>
+        </q-toolbar>
+      </div>
     </q-header>
 
     <q-page-container>
