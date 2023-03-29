@@ -24,7 +24,7 @@ export default defineComponent({
   <q-layout view="hHh lpR fFf">
     <q-header>
       <div class="container q-py-xl">
-        <q-toolbar>
+        <q-toolbar class="q-pa-none">
           <q-toolbar-title>
             <q-avatar
               :icon="'img:/src/assets/' + titleImage"
@@ -35,7 +35,7 @@ export default defineComponent({
 
           <tooltip-button></tooltip-button>
 
-          <language-switcher class="q-ml-lg"></language-switcher>
+          <language-switcher class="q-ml-xl"></language-switcher>
         </q-toolbar>
       </div>
     </q-header>
