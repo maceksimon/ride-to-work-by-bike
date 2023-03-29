@@ -1,10 +1,18 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    {{ $t('hello') }}
-    <vue-logo></vue-logo>
+  <q-page>
+    <div class="container q-py-xl">
+      <hero-image-stacked></hero-image-stacked>
+    </div>
   </q-page>
 </template>
 
-<script lang="ts" setup>
-import { ref } from 'vue';
+<script lang="ts">
+import { defineComponent } from 'vue';
+import HeroImageStacked from 'src/components/HeroImageStacked.vue';
+
+export default defineComponent({
+  components: {
+    HeroImageStacked,
+  },
+});
 </script>
