@@ -7,6 +7,20 @@ export default ({ app }) => {
     locale: 'en-US',
     globalInjection: true,
     messages,
+    datetimeFormats: {
+      'en-US': {
+        short: {
+          day: 'numeric',
+          month: 'numeric',
+        },
+      },
+      cs: {
+        short: {
+          day: 'numeric',
+          month: 'long',
+        },
+      },
+    },
   });
 
   // Tell app to use the I18n instance

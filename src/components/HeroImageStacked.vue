@@ -18,17 +18,17 @@ export default defineComponent({
     <q-img :src="'/src/assets/' + messageImage" width="80px"></q-img>
     <div class="hero-image-stacked__wrapper q-pt-sm">
       <h1 class="text-h4 text-bold font-lexend">
-        Dáme vám vědět, jakmile vypíšeme další výzvu
+        {{ $t('hero.title') }}
       </h1>
       <div class="hero-image-stacked__content">
         <p>
-          Jsme rádi, že s námi chcete jezdit na kole, koloběžce, chodit či běhat
-          (nejen) do práce.
+          {{ $t('hero.text.section1') }}
         </p>
-        <p>Další výzvu připravujeme.</p>
         <p>
-          Zatím se můžete podívat na novinky v oblasti městské cyklistiky a
-          udržitelné dopravy.
+          {{ $t('hero.text.section2') }}
+        </p>
+        <p>
+          {{ $t('hero.text.section3') }}
         </p>
       </div>
     </div>
