@@ -1,13 +1,6 @@
-<template>
-  <q-page>
-    <div class="container q-py-xl">
-      <hero-image-stacked></hero-image-stacked>
-    </div>
-  </q-page>
-</template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
+
 import HeroImageStacked from 'src/components/HeroImageStacked.vue';
 
 export default defineComponent({
@@ -16,3 +9,11 @@ export default defineComponent({
   },
 });
 </script>
+
+<template>
+  <q-page>
+    <div class="container q-py-xl">
+      <hero-image-stacked></hero-image-stacked>
+    </div>
+  </q-page>
+</template>

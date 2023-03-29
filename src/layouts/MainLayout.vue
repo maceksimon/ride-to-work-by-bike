@@ -1,8 +1,10 @@
 <script lang="ts">
 import config from '../../app.config.toml';
 import { defineComponent } from 'vue';
+
 import LanguageSwitcher from 'components/LanguageSwitcher.vue';
 import TooltipButton from 'src/components/TooltipButton.vue';
+import PageBackground from 'src/components/PageBackground.vue';
 
 export default defineComponent({
   name: 'MainLayout',
@@ -10,6 +12,7 @@ export default defineComponent({
   components: {
     LanguageSwitcher,
     TooltipButton,
+    PageBackground,
   },
 
   setup() {
@@ -22,7 +25,8 @@ export default defineComponent({
 
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header>
+    <page-background></page-background>
+    <q-header reveal :reveal-offset="0">
       <div class="container q-py-xl">
         <q-toolbar class="q-pa-none">
           <q-toolbar-title>
