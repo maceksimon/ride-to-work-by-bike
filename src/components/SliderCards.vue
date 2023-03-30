@@ -5,6 +5,8 @@ import CardNews from './CardNews.vue';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
+import { Card } from './models';
+
 defineComponent({
   components: {
     CardNews,
@@ -13,30 +15,36 @@ defineComponent({
   },
 });
 
-const cards = [
+const cards: Card[] = [
   {
     id: '1',
     datePublished: new Date('2022-09-27T13:42:44+00:00'),
+    url: '#',
   },
   {
     id: '2',
     datePublished: new Date('2022-09-22T13:42:44+00:00'),
+    url: '#',
   },
   {
     id: '3',
     datePublished: new Date('2022-09-14T13:42:44+00:00'),
+    url: '#',
   },
   {
     id: '4',
     datePublished: new Date('2022-09-14T13:42:44+00:00'),
+    url: '#',
   },
   {
     id: '3',
     datePublished: new Date('2022-09-14T13:42:44+00:00'),
+    url: '#',
   },
   {
     id: '4',
     datePublished: new Date('2022-09-14T13:42:44+00:00'),
+    url: '#',
   },
 ];
 </script>
@@ -91,7 +99,7 @@ const cards = [
 }
 .swiper-button-prev {
   left: auto;
-  right: 64px;
+  right: 56px;
 
   &:after {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 16 16'%3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z'/%3E%3C/svg%3E");

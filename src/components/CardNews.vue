@@ -1,10 +1,6 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue';
-
-interface Card {
-  id: string;
-  datePublished: Date;
-}
+import { Card } from './models';
 
 const props = defineProps<{
   card: Card;
@@ -14,12 +10,12 @@ const props = defineProps<{
 <template>
   <article class="card-news font-lexend text-bold">
     <div class="card-news__image">
-      <a href="">
+      <a :href="props.card.url">
         <q-img ratio="1.33" src="https://via.placeholder.com/400x300"></q-img>
       </a>
     </div>
     <div class="card-news__content">
-      <a href="">
+      <a :href="props.card.url">
         <h2 class="card-news__title q-ma-none text-h6 text-weight-bold">
           {{ $t(`slider.card.${props.card.id}.title`) }}
         </h2>
