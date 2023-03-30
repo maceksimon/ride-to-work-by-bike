@@ -58,43 +58,47 @@ export default defineComponent({
           </div>
           <div class="footer__icons">
             <q-btn
+              to="https://www.facebook.com/spolekautomat/"
               icon="bi-facebook"
               unelevated
               round
               outline
-              :stretch="false"
               color="white"
               text-color="black"
+              :stretch="false"
             >
             </q-btn>
             <q-btn
+              to="https://www.instagram.com/spolekautomat/"
               icon="bi-instagram"
               unelevated
               round
               outline
-              :stretch="false"
               color="white"
               text-color="black"
+              :stretch="false"
             >
             </q-btn>
             <q-btn
+              to="https://twitter.com/spolekautomat"
               icon="bi-twitter"
               unelevated
               round
               outline
-              :stretch="false"
               color="white"
               text-color="black"
+              :stretch="false"
             >
             </q-btn>
             <q-btn
+              to="https://www.youtube.com/@spolekautomat"
               icon="bi-youtube"
               unelevated
               round
               outline
-              :stretch="false"
               color="white"
               text-color="black"
+              :stretch="false"
             >
             </q-btn>
           </div>
