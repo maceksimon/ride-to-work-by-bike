@@ -1,24 +1,16 @@
-<script lang="ts">
-import config from '../../app.config.toml';
+<script lang="ts" setup>
 import { defineComponent } from 'vue';
-
-import LanguageSwitcher from 'components/LanguageSwitcher.vue';
-import TooltipButton from 'src/components/TooltipButton.vue';
 import PageBackground from 'src/components/PageBackground.vue';
+import TheHeader from 'src/components/TheHeader.vue';
+import TheFooter from 'src/components/TheFooter.vue';
 
-export default defineComponent({
+defineComponent({
   name: 'MainLayout',
 
   components: {
-    LanguageSwitcher,
-    TooltipButton,
     PageBackground,
-  },
-
-  setup() {
-    return {
-      titleImage: config.titleImage,
-    };
+    TheFooter,
+    TheHeader,
   },
 });
 </script>
@@ -26,85 +18,13 @@ export default defineComponent({
 <template>
   <q-layout view="hHh lpR fFf">
     <page-background></page-background>
-    <q-header>
-      <div class="container q-py-xl">
-        <q-toolbar class="q-pa-none">
-          <q-toolbar-title>
-            <q-avatar
-              :icon="'img:/src/assets/' + titleImage"
-              :square="true"
-              :rounded="false"
-            ></q-avatar>
-          </q-toolbar-title>
-
-          <tooltip-button></tooltip-button>
-
-          <language-switcher class="q-ml-xl"></language-switcher>
-        </q-toolbar>
-      </div>
-    </q-header>
+    <the-header></the-header>
 
     <q-page-container>
       <router-view />
     </q-page-container>
 
-    <q-footer>
-      <div class="container">
-        <div class="footer__wrapper">
-          <div class="footer-title">
-            <h2 class="text-h4 text-bold font-lexend q-ma-none">
-              {{ $t('footer.title') }}
-            </h2>
-          </div>
-          <div class="footer__icons">
-            <q-btn
-              to="https://www.facebook.com/spolekautomat/"
-              icon="bi-facebook"
-              unelevated
-              round
-              outline
-              color="white"
-              text-color="black"
-              :stretch="false"
-            >
-            </q-btn>
-            <q-btn
-              to="https://www.instagram.com/spolekautomat/"
-              icon="bi-instagram"
-              unelevated
-              round
-              outline
-              color="white"
-              text-color="black"
-              :stretch="false"
-            >
-            </q-btn>
-            <q-btn
-              to="https://twitter.com/spolekautomat"
-              icon="bi-twitter"
-              unelevated
-              round
-              outline
-              color="white"
-              text-color="black"
-              :stretch="false"
-            >
-            </q-btn>
-            <q-btn
-              to="https://www.youtube.com/@spolekautomat"
-              icon="bi-youtube"
-              unelevated
-              round
-              outline
-              color="white"
-              text-color="black"
-              :stretch="false"
-            >
-            </q-btn>
-          </div>
-        </div>
-      </div>
-    </q-footer>
+    <the-footer></the-footer>
   </q-layout>
 </template>
 
