@@ -21,6 +21,7 @@ export default defineComponent({
       unelevated
       round
       :style="{ backgroundColor: lightGrayColor }"
+      :class="{ 'is-active': $i18n.locale === 'en-US' }"
       @click.prevent="$i18n.locale = 'en-US'"
     />
     <q-btn
@@ -28,7 +29,8 @@ export default defineComponent({
       flat
       unelevated
       round
-      :style="{ backgroundColor: blackColor }"
+      :style="{ backgroundColor: lightGrayColor }"
+      :class="{ 'is-active': $i18n.locale === 'cs' }"
       @click.prevent="$i18n.locale = 'cs'"
     />
   </div>
@@ -42,6 +44,11 @@ export default defineComponent({
 
   > *:not(:first-child) {
     margin-right: -8px;
+  }
+
+  .q-btn.is-active {
+    z-index: 10;
+    background-color: #000 !important;
   }
 }
 </style>
