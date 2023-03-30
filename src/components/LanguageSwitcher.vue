@@ -1,9 +1,11 @@
 <script lang="ts" setup>
-import { useI18n } from 'vue-i18n';
+import { inject } from 'vue';
 import { useRouteQuery } from '@vueuse/router';
 
-const { locale } = useI18n({ useScope: 'global' });
 const lang = useRouteQuery('lang');
+
+const log: any = inject('vuejs3-logger');
+log.debug(lang.value);
 </script>
 
 <template>
