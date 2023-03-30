@@ -1,16 +1,7 @@
-<script lang="ts">
+<script lang="ts" setup>
 import config from '../../app.config.toml';
-import { defineComponent } from 'vue';
 
-export default defineComponent({
-  name: 'HeroImageStacked',
-
-  setup() {
-    return {
-      messageImage: config.messageImage,
-    };
-  },
-});
+const messageImage = config.messageImage;
 </script>
 
 <template>
