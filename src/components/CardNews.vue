@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { defineProps } from 'vue';
-import { Card } from './models';
+
+import type { Card } from './models';
 
 const props = defineProps<{
   card: Card;
@@ -11,7 +12,7 @@ const props = defineProps<{
   <article class="card-news font-lexend text-bold">
     <div class="card-news__image">
       <a :href="props.card.url">
-        <q-img ratio="1.33" src="https://via.placeholder.com/400x300"></q-img>
+        <q-img ratio="1.33" :src="props.card.image"></q-img>
       </a>
     </div>
     <div class="card-news__content">
@@ -69,6 +70,7 @@ const props = defineProps<{
     .card-news__title {
       line-height: 1.2;
     }
+
     .card-news__date {
       display: inline-block;
       margin-top: 8px;

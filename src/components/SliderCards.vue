@@ -5,7 +5,7 @@ import CardNews from './CardNews.vue';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
-import { Card } from './models';
+import type { Card } from './models';
 
 defineComponent({
   components: {
@@ -15,36 +15,44 @@ defineComponent({
   },
 });
 
+// In a real app, this would be a dynamic data source, dependent on current locale.
+// For example purposes, I translated the card content via i18n API using ID.
 const cards: Card[] = [
   {
     id: '1',
     datePublished: new Date('2022-09-27T13:42:44+00:00'),
     url: '#',
+    image: 'https://via.placeholder.com/400x300',
   },
   {
     id: '2',
     datePublished: new Date('2022-09-22T13:42:44+00:00'),
     url: '#',
+    image: 'https://via.placeholder.com/400x300',
   },
   {
     id: '3',
     datePublished: new Date('2022-09-14T13:42:44+00:00'),
     url: '#',
+    image: 'https://via.placeholder.com/400x300',
   },
   {
     id: '4',
     datePublished: new Date('2022-09-14T13:42:44+00:00'),
     url: '#',
+    image: 'https://via.placeholder.com/400x300',
   },
   {
     id: '3',
     datePublished: new Date('2022-09-14T13:42:44+00:00'),
     url: '#',
+    image: 'https://via.placeholder.com/400x300',
   },
   {
     id: '4',
     datePublished: new Date('2022-09-14T13:42:44+00:00'),
     url: '#',
+    image: 'https://via.placeholder.com/400x300',
   },
 ];
 </script>
@@ -74,9 +82,11 @@ const cards: Card[] = [
 .swiper {
   padding-bottom: 64px;
 }
+
 .swiper-slide {
   height: auto;
 }
+
 .swiper-button {
   position: absolute;
   bottom: 0;
@@ -84,6 +94,7 @@ const cards: Card[] = [
   right: 0;
   text-align: center;
 }
+
 .swiper-button-next,
 .swiper-button-prev {
   border-radius: 9999px;
@@ -110,6 +121,7 @@ const cards: Card[] = [
     }
   }
 }
+
 .swiper-button-prev {
   left: auto;
   right: 56px;
