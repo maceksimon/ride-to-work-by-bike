@@ -9,7 +9,8 @@
         </div>
         <div class="footer__icons">
           <q-btn
-            to="https://www.facebook.com/spolekautomat/"
+            href="https://www.facebook.com/spolekautomat/"
+            target="_blank"
             icon="bi-facebook"
             unelevated
             round
@@ -20,7 +21,8 @@
           >
           </q-btn>
           <q-btn
-            to="https://www.instagram.com/spolekautomat/"
+            href="https://www.instagram.com/spolekautomat/"
+            target="_blank"
             icon="bi-instagram"
             unelevated
             round
@@ -31,7 +33,8 @@
           >
           </q-btn>
           <q-btn
-            to="https://twitter.com/spolekautomat"
+            href="https://twitter.com/spolekautomat"
+            target="_blank"
             icon="bi-twitter"
             unelevated
             round
@@ -42,7 +45,8 @@
           >
           </q-btn>
           <q-btn
-            to="https://www.youtube.com/@spolekautomat"
+            href="https://www.youtube.com/@spolekautomat"
+            target="_blank"
             icon="bi-youtube"
             unelevated
             round
