@@ -1,5 +1,5 @@
 import { createI18n } from 'vue-i18n';
-import messages from 'src/i18n';
+import { i18nOptions } from 'src/i18n';
 
 export default ({ app, router }) => {
   let newLocale = null;
@@ -17,29 +17,7 @@ export default ({ app, router }) => {
 
     if (!app.__VUE_I18N__) {
       // Create I18n instance
-      const i18n = createI18n({
-        locale: locale ? locale : 'en-US',
-        legacy: false,
-        fallbackLocale: 'en-US',
-        globalInjection: true,
-        messages,
-        datetimeFormats: {
-          'en-US': {
-            short: {
-              day: 'numeric',
-              month: 'numeric',
-              year: 'numeric',
-            },
-          },
-          'cs-CZ': {
-            short: {
-              day: 'numeric',
-              month: 'long',
-              year: 'numeric',
-            },
-          },
-        },
-      });
+      const i18n = createI18n(i18nOptions);
 
       // Tell app to use the I18n instance
       app.use(i18n);
