@@ -1,17 +1,4 @@
-<script lang="ts">
-import { defineComponent } from 'vue';
-import config from '../../app.config.toml';
-
-export default defineComponent({
-  name: 'LanguageSwitcher',
-  setup() {
-    return {
-      lightGrayColor: config.lightGrayColor,
-      blackColor: config.blackColor,
-    };
-  },
-});
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="c-language-switcher">
@@ -48,7 +35,7 @@ export default defineComponent({
 
   .q-btn.is-active {
     z-index: 10;
-    background-color: #000 !important;
+    background-color: $primary !important;
   }
 }
 </style>
