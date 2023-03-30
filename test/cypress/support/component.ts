@@ -33,11 +33,10 @@ import { Dialog } from 'quasar';
 import { VueTestUtils } from 'cypress/vue';
 const { config } = VueTestUtils;
 
-import { createI18n } from 'vue-i18n';
-import { i18nOptions } from '../../../src/i18n';
-
 // Example to import i18n from boot and use as plugin
 // import { i18n } from 'src/boot/i18n';
+import { createI18n } from 'vue-i18n';
+import { i18nOptions } from 'src/i18n';
 
 // You can modify the global config here for all tests or pass in the configuration per test
 // For example use the actual i18n instance or mock it
