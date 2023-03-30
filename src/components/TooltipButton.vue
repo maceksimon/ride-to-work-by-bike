@@ -16,9 +16,9 @@ export default defineComponent({
 <template>
   <q-btn
     icon="bi-question-circle-fill"
-    flat
     unelevated
     round
+    color="secondary"
     :stretch="false"
     :style="{ backgroundColor: lightGrayColor }"
   >

@@ -17,19 +17,19 @@ export default defineComponent({
   <div class="c-language-switcher">
     <q-btn
       label="EN"
-      flat
       unelevated
       round
-      :style="{ backgroundColor: lightGrayColor }"
+      color="secondary"
+      text-color="white"
       :class="{ 'is-active': $i18n.locale === 'en-US' }"
       @click.prevent="$i18n.locale = 'en-US'"
     />
     <q-btn
       label="CZ"
-      flat
       unelevated
       round
-      :style="{ backgroundColor: lightGrayColor }"
+      color="secondary"
+      text-color="white"
       :class="{ 'is-active': $i18n.locale === 'cs' }"
       @click.prevent="$i18n.locale = 'cs'"
     />
