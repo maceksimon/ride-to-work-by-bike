@@ -12,12 +12,14 @@ export default ({ app }) => {
         short: {
           day: 'numeric',
           month: 'numeric',
+          year: 'numeric',
         },
       },
       cs: {
         short: {
           day: 'numeric',
           month: 'long',
+          year: 'numeric',
         },
       },
     },
