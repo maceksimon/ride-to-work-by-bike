@@ -1,4 +1,10 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { useI18n } from 'vue-i18n';
+import { useRouteQuery } from '@vueuse/router';
+
+const { locale } = useI18n({ useScope: 'global' });
+const lang = useRouteQuery('lang');
+</script>
 
 <template>
   <div class="c-language-switcher">
@@ -9,7 +15,12 @@
       color="secondary"
       text-color="white"
       :class="{ 'is-active': $i18n.locale === 'en-US' }"
-      @click.prevent="$i18n.locale = 'en-US'"
+      @click.prevent="
+        {
+          $i18n.locale = 'en-US';
+          lang = 'en';
+        }
+      "
     />
     <q-btn
       label="CZ"
@@ -17,8 +28,13 @@
       round
       color="secondary"
       text-color="white"
-      :class="{ 'is-active': $i18n.locale === 'cs' }"
-      @click.prevent="$i18n.locale = 'cs'"
+      :class="{ 'is-active': $i18n.locale === 'cs-CZ' }"
+      @click.prevent="
+        {
+          $i18n.locale = 'cs-CZ';
+          lang = 'cs';
+        }
+      "
     />
   </div>
 </template>
