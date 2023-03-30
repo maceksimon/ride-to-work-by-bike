@@ -16,7 +16,7 @@ export default defineComponent({
   <q-page>
     <div class="container q-py-xl">
       <hero-image-stacked></hero-image-stacked>
-      <slider-cards></slider-cards>
+      <slider-cards class="q-mt-xl"></slider-cards>
     </div>
   </q-page>
 </template>
