@@ -36,8 +36,6 @@ export default defineComponent({
 </template>
 
 <style lang="scss">
-.hero-image-stacked {
-}
 .hero-image-stacked__wrapper {
   max-width: 520px;
 
