@@ -17,13 +17,13 @@ const backgroundImage = config.backgroundImage;
   position: absolute;
   top: 0;
   right: 0;
-  left: calc(50% - 100px);
-  width: calc(50% + 100px);
-  height: 1000px;
+  left: calc(50% - 160px);
+  width: auto;
+  height: 1300px;
 
   .q-img__image {
     height: 100%;
-    object-position: 50% bottom !important;
+    object-position: left bottom !important;
   }
 }
 </style>
