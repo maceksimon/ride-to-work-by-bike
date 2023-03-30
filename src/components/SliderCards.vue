@@ -60,6 +60,12 @@ const cards: Card[] = [
       <swiper-slide v-for="card in cards" :key="card.id" class="swiper-slide">
         <card-news :card="card"></card-news>
       </swiper-slide>
+
+      <div class="swiper-button font-lexend">
+        <q-btn to="#" unelevated rounded color="black" size="16px">
+          {{ $t('slider.button') }}
+        </q-btn>
+      </div>
     </swiper>
   </div>
 </template>
@@ -70,6 +76,13 @@ const cards: Card[] = [
 }
 .swiper-slide {
   height: auto;
+}
+.swiper-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 .swiper-button-next,
 .swiper-button-prev {
