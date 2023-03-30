@@ -15,18 +15,22 @@ const props = defineProps<{
       </a>
     </div>
     <div class="card-news__content">
-      <a :href="props.card.url">
-        <h2 class="card-news__title q-ma-none text-h6 text-weight-bold">
-          {{ $t(`slider.card.${props.card.id}.title`) }}
-        </h2>
-      </a>
-      <time
-        v-if="props.card.datePublished"
-        class="card-news__date text-weight-regular"
-        :datetime="props.card.datePublished.toString()"
-      >
-        {{ $d(props.card.datePublished, 'short') }}
-      </time>
+      <div>
+        <a :href="props.card.url">
+          <h2 class="card-news__title q-ma-none text-h6 text-weight-bold">
+            {{ $t(`slider.card.${props.card.id}.title`) }}
+          </h2>
+        </a>
+      </div>
+      <div>
+        <time
+          v-if="props.card.datePublished"
+          class="card-news__date text-weight-regular"
+          :datetime="props.card.datePublished.toString()"
+        >
+          {{ $d(props.card.datePublished, 'short') }}
+        </time>
+      </div>
     </div>
   </article>
 </template>
@@ -39,12 +43,18 @@ const props = defineProps<{
   border-radius: 6px 6px 24px 24px;
   overflow: hidden;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &__image {
     max-width: 100%;
   }
 
   &__content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 16px;
 
     a {
