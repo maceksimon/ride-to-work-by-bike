@@ -26,13 +26,17 @@ defineComponent({
       ></q-img>
     </div>
 
-    <the-header></the-header>
+    <q-header>
+      <the-header></the-header>
+    </q-header>
 
     <q-page-container>
       <router-view />
     </q-page-container>
 
-    <the-footer></the-footer>
+    <q-footer>
+      <the-footer></the-footer>
+    </q-footer>
   </q-layout>
 </template>
 
@@ -54,34 +58,11 @@ defineComponent({
 .q-header {
   position: absolute;
   background-color: transparent;
-
-  .q-avatar,
-  .q-avatar .q-icon {
-    height: 75px;
-    width: auto;
-  }
 }
 
 .q-footer {
   position: absolute;
   background-color: transparent;
   color: $grey-10;
-
-  .footer__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px;
-    background: $grey-2;
-    margin: 48px 0;
-  }
-  .footer__icons {
-    display: flex;
-    gap: 12px;
-
-    .q-icon {
-      font-size: 18px;
-    }
-  }
 }
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineComponent } from 'vue';
+import { defineComponent, inject } from 'vue';
 import type { Card } from '../components/models';
 
 import HeroImageStacked from 'src/components/HeroImageStacked.vue';
@@ -52,6 +52,10 @@ const cards: Card[] = [
     image: 'https://via.placeholder.com/400x300',
   },
 ];
+
+// test logger
+const log: any = inject('vuejs3-logger');
+log.debug(cards);
 </script>
 
 <template>
