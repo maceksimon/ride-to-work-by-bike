@@ -4,7 +4,7 @@ import { i18nOptions } from 'src/i18n';
 export default ({ app, router }) => {
   let newLocale = null;
 
-  router.beforeEach((to, from) => {
+  router.beforeEach((to) => {
     newLocale = to.query.lang;
 
     if (newLocale === 'en') {
