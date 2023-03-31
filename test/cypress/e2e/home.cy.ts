@@ -1,48 +1,34 @@
 // Use `cy.dataCy` custom command for more robust tests
 // See https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements
 
-// ** This file is an example of how to write Cypress tests, you can safely delete it **
-
-// This test will pass when run against a clean Quasar project
-describe('Landing', () => {
+describe('Homepage', () => {
   beforeEach(() => {
     cy.visit('/');
   });
-  it('.should() - assert that <title> is correct', () => {
-    cy.title().should('include', 'Quasar');
-    cy.get('li').first().click();
-    cy.contains('Clicks on todos: 1').should('exist');
+
+  it('has background image', () => {
+    cy.get('.background-image').should('exist');
+  });
+
+  it('has English heading', () => {
+    cy.get('h1').should(
+      'contain',
+      "We'll let you know as soon as we put out another call"
+    );
+  });
+
+  it('changes UI when CZ language is selected', () => {
+    cy.get('.language-switcher--cs').click();
+
+    cy.get('h1').should(
+      'contain',
+      'Dáme vám vědět, jakmile vypíšeme další výzvu'
+    );
+
+    cy.url().should('include', '?lang=cs');
   });
 });
 
-// ** The following code is an example to show you how to write some tests for your home page **
-//
-// describe('Home page tests', () => {
-//   beforeEach(() => {
-//     cy.visit('/');
-//   });
-//   it('has pretty background', () => {
-//     cy.dataCy('landing-wrapper')
-//       .should('have.css', 'background')
-//       .and('match', /(".+(\/img\/background).+\.png)/);
-//   });
-//   it('has pretty logo', () => {
-//     cy.dataCy('landing-wrapper img')
-//       .should('have.class', 'logo-main')
-//       .and('have.attr', 'src')
-//       .and('match', /^(data:image\/svg\+xml).+/);
-//   });
-//   it('has very important information', () => {
-//     cy.dataCy('instruction-wrapper')
-//       .should('contain', 'SETUP INSTRUCTIONS')
-//       .and('contain', 'Configure Authentication')
-//       .and('contain', 'Database Configuration and CRUD operations')
-//       .and('contain', 'Continuous Integration & Continuous Deployment CI/CD');
-//   });
-// });
-
- 
 // Workaround for Cypress AE + TS + Vite
 // See: https://github.com/quasarframework/quasar-testing/issues/262#issuecomment-1154127497
 export {};
-
