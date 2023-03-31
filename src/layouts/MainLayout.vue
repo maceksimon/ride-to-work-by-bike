@@ -1,14 +1,16 @@
 <script lang="ts" setup>
 import { defineComponent } from 'vue';
-import PageBackground from 'src/components/PageBackground.vue';
+import config from '../../app.config.toml';
+
 import TheHeader from 'src/components/TheHeader.vue';
 import TheFooter from 'src/components/TheFooter.vue';
+
+const backgroundImage = config.backgroundImage;
 
 defineComponent({
   name: 'MainLayout',
 
   components: {
-    PageBackground,
     TheFooter,
     TheHeader,
   },
@@ -17,7 +19,13 @@ defineComponent({
 
 <template>
   <q-layout view="hHh lpR fFf">
-    <page-background></page-background>
+    <div class="background-image__wrapper">
+      <q-img
+        :src="'/src/assets/' + backgroundImage"
+        class="background-image"
+      ></q-img>
+    </div>
+
     <the-header></the-header>
 
     <q-page-container>
@@ -29,6 +37,20 @@ defineComponent({
 </template>
 
 <style lang="scss">
+.background-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: calc(50% - 160px);
+  width: auto;
+  height: 1300px;
+
+  .q-img__image {
+    height: 100%;
+    object-position: left bottom !important;
+  }
+}
+
 .q-header {
   position: absolute;
   background-color: transparent;
