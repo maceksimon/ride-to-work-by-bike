@@ -1,5 +1,4 @@
 import NewsSlider from '../NewsSlider.vue';
-import texts from '../../../locales/en-US.json';
 
 describe('NewsSlider', () => {
   it('renders 4 slides', () => {
