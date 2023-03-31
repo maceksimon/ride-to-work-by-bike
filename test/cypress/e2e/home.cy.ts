@@ -24,6 +24,10 @@ describe('Homepage', () => {
       'contain',
       'Dáme vám vědět, jakmile vypíšeme další výzvu'
     );
+  });
+
+  it('changes URL parameter when CZ language is selected', () => {
+    cy.get('.language-switcher--cs').click();
 
     cy.url().should('include', '?lang=cs');
   });
