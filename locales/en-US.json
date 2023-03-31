@@ -1,0 +1,32 @@
+{
+  "hello": "Hello",
+  "tooltip": "This app allows you to track the time spent commuting on bike.",
+  "footer": {
+    "title": "Follow us on social media"
+  },
+  "hero": {
+    "title": "We'll let you know as soon as we put out another call",
+    "text": {
+      "section1": "We are glad that you want to ride a bike, scooter, walk or run (not only) to work with us.",
+      "section2": "We are preparing the next challenge.",
+      "section3": "In the meantime, take a look at what's new in urban cycling and sustainable transport."
+    }
+  },
+  "slider": {
+    "button": "Visit blog",
+    "card": {
+      "1": {
+        "title": "Uherské Hradiště won the title Cycloskokan Do práce na kole 2022. Otrokovice enters the Hall of Fame"
+      },
+      "2": {
+        "title": "Jihlava has become the Do práce na kole 2022. Uherské Hradiště won in the category Cykloskokan"
+      },
+      "3": {
+        "title": "As part of the European Mobility Week, the 6th edition of the September Do práce na kole Challenge has started"
+      },
+      "4": {
+        "title": "As part of the European Mobility Week, the 6th edition of the September Do práce na kole Challenge has started"
+      }
+    }
+  }
+}

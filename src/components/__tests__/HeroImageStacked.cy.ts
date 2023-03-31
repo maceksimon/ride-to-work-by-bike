@@ -1,5 +1,5 @@
 import HeroImageStacked from '../HeroImageStacked.vue';
-import texts from '../../../locales/en-US.toml';
+import texts from '../../../locales/en-US.json';
 
 describe('HeroImageStacked', () => {
   it('has h1 element', () => {

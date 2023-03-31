@@ -1,5 +1,5 @@
-import enUS from '../../locales/en-US.toml';
-import cs from '../../locales/cs-CZ.toml';
+import enUS from '../../locales/en-US.json';
+import cs from '../../locales/cs-CZ.json';
 import { I18nOptions } from 'vue-i18n';
 
 export default {
