@@ -22,8 +22,8 @@ import 'src/css/app.scss'; // Or 'src/css/app.css' if no CSS preprocessor is ins
 
 // ICON SETS
 // If you use multiple or different icon-sets then the default, be sure to import them here.
-import 'quasar/dist/icon-set/material-icons.umd.prod';
-import '@quasar/extras/material-icons/material-icons.css';
+import 'quasar/dist/icon-set/bootstrap-icons.umd.prod';
+import '@quasar/extras/bootstrap-icons/bootstrap-icons.css';
 
 import { installQuasarPlugin } from '@quasar/quasar-app-extension-testing-e2e-cypress';
 import { Dialog } from 'quasar';
