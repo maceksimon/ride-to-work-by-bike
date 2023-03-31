@@ -1,11 +1,15 @@
 <script lang="ts" setup>
-import { defineComponent } from 'vue';
+import { defineComponent, defineProps } from 'vue';
+import type { Card } from './models';
+
 import NewsCard from './NewsCard.vue';
 // Import Swiper Vue.js components
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
-import type { Card } from './models';
+const props = defineProps<{
+  cards: Card[];
+}>();
 
 defineComponent({
   components: {
@@ -14,47 +18,6 @@ defineComponent({
     SwiperSlide,
   },
 });
-
-// In a real app, this would be a dynamic data source, dependent on current locale.
-// For example purposes, I translated the card content via i18n API using ID.
-const cards: Card[] = [
-  {
-    id: '1',
-    datePublished: new Date('2022-09-27T13:42:44+00:00'),
-    url: '#',
-    image: 'https://via.placeholder.com/400x300',
-  },
-  {
-    id: '2',
-    datePublished: new Date('2022-09-22T13:42:44+00:00'),
-    url: '#',
-    image: 'https://via.placeholder.com/400x300',
-  },
-  {
-    id: '3',
-    datePublished: new Date('2022-09-14T13:42:44+00:00'),
-    url: '#',
-    image: 'https://via.placeholder.com/400x300',
-  },
-  {
-    id: '4',
-    datePublished: new Date('2022-09-14T13:42:44+00:00'),
-    url: '#',
-    image: 'https://via.placeholder.com/400x300',
-  },
-  {
-    id: '3',
-    datePublished: new Date('2022-09-14T13:42:44+00:00'),
-    url: '#',
-    image: 'https://via.placeholder.com/400x300',
-  },
-  {
-    id: '4',
-    datePublished: new Date('2022-09-14T13:42:44+00:00'),
-    url: '#',
-    image: 'https://via.placeholder.com/400x300',
-  },
-];
 </script>
 
 <template>
@@ -65,7 +28,11 @@ const cards: Card[] = [
       :slides-per-view="4"
       :space-between="24"
     >
-      <swiper-slide v-for="card in cards" :key="card.id" class="swiper-slide">
+      <swiper-slide
+        v-for="card in props.cards"
+        :key="card.id"
+        class="swiper-slide"
+      >
         <news-card :card="card"></news-card>
       </swiper-slide>
 
