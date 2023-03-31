@@ -28,5 +28,10 @@
         "title": "V rámci Evropského týdne mobility odstartoval už 6. ročník Zářijové výzvy Do práce na kole"
       }
     }
+  },
+  "404": {
+    "title": "404",
+    "text": "Dojeli jste do slepé uličky...",
+    "button": "Vrátit se domů"
   }
 }

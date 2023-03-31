@@ -70,7 +70,7 @@ const cards: Card[] = [
       </swiper-slide>
 
       <div class="swiper-button font-lexend">
-        <q-btn to="#" unelevated rounded color="black" size="16px">
+        <q-btn to="/blog" unelevated rounded color="black" size="16px">
           {{ $t('slider.button') }}
         </q-btn>
       </div>

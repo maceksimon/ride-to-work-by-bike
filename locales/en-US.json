@@ -28,5 +28,10 @@
         "title": "As part of the European Mobility Week, the 6th edition of the September Do práce na kole Challenge has started"
       }
     }
+  },
+  "404": {
+    "title": "404",
+    "text": "You rode into a blind alley...",
+    "button": "Go home"
   }
 }

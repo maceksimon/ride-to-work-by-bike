@@ -1,23 +1,24 @@
-<template>
-  <div
-    class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center"
-  >
-    <div>
-      <div style="font-size: 30vh">404</div>
+<script lang="ts" setup></script>
 
-      <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
+<template>
+  <div class="fullscreen text-center q-pa-md flex flex-center">
+    <div>
+      <div class="text-h4 text-bold q-mb-xl">{{ $t('404.title') }}</div>
+
+      <div class="text-h3 font-lexend" style="opacity: 0.4">
+        {{ $t('404.text') }}
+      </div>
 
       <q-btn
-        class="q-mt-xl"
-        color="white"
-        text-color="blue"
-        unelevated
         to="/"
-        label="Go Home"
-        no-caps
+        class="q-mt-xl font-lexend"
+        color="primary"
+        text-color="white"
+        unelevated
+        rounded
+        size="16px"
+        :label="$t('404.button')"
       />
     </div>
   </div>
 </template>
-
-<script lang="ts" setup></script>
