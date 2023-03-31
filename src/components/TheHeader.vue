@@ -2,11 +2,11 @@
 import { defineComponent } from 'vue';
 import config from '../../app.config.toml';
 import LanguageSwitcher from 'components/LanguageSwitcher.vue';
-import TooltipButton from 'src/components/TooltipButton.vue';
+
+const lightGrayColor = config.lightGrayColor;
 
 defineComponent({
   components: {
-    TooltipButton,
     LanguageSwitcher,
   },
 });
@@ -23,7 +23,16 @@ defineComponent({
           ></q-avatar>
         </q-toolbar-title>
 
-        <tooltip-button></tooltip-button>
+        <q-btn
+          icon="bi-question-circle-fill"
+          unelevated
+          round
+          color="secondary"
+          :stretch="false"
+          :style="{ backgroundColor: lightGrayColor }"
+        >
+          <q-tooltip>{{ $t('tooltip') }}</q-tooltip>
+        </q-btn>
 
         <language-switcher class="q-ml-xl"></language-switcher>
       </q-toolbar>
