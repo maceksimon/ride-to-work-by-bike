@@ -5,8 +5,9 @@ import { useRouteQuery } from '@vueuse/router';
 
 const lightGrayColor = config.lightGrayColor;
 
+// use route query to change language URL parameter
 const lang = useRouteQuery('lang');
-
+// test logger
 const log: any = inject('vuejs3-logger');
 log.debug(lang.value);
 </script>
