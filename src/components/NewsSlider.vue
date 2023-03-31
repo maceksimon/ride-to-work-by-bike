@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { defineComponent } from 'vue';
-import CardNews from './CardNews.vue';
+import NewsCard from './NewsCard.vue';
 // Import Swiper Vue.js components
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -9,7 +9,7 @@ import type { Card } from './models';
 
 defineComponent({
   components: {
-    CardNews,
+    NewsCard,
     Swiper,
     SwiperSlide,
   },
@@ -66,7 +66,7 @@ const cards: Card[] = [
       :space-between="24"
     >
       <swiper-slide v-for="card in cards" :key="card.id" class="swiper-slide">
-        <card-news :card="card"></card-news>
+        <news-card :card="card"></news-card>
       </swiper-slide>
 
       <div class="swiper-button font-lexend">
