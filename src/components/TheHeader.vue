@@ -22,6 +22,7 @@ const lang = useRouteQuery('lang');
         unelevated
         round
         color="secondary"
+        class="tooltip-button"
         :stretch="false"
         :style="{ backgroundColor: lightGrayColor }"
       >
