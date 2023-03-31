@@ -9,13 +9,14 @@ log.debug(lang.value);
 </script>
 
 <template>
-  <div class="c-language-switcher">
+  <div class="language-switcher">
     <q-btn
       label="EN"
       unelevated
       round
       color="secondary"
       text-color="white"
+      class="language-switcher--en"
       :class="{ 'is-active': $i18n.locale === 'en-US' }"
       @click.prevent="
         {
@@ -30,6 +31,7 @@ log.debug(lang.value);
       round
       color="secondary"
       text-color="white"
+      class="language-switcher--cs"
       :class="{ 'is-active': $i18n.locale === 'cs-CZ' }"
       @click.prevent="
         {
@@ -42,7 +44,7 @@ log.debug(lang.value);
 </template>
 
 <style lang="scss">
-.c-language-switcher {
+.language-switcher {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
